@@ -1,0 +1,24 @@
+*** Settings ***
+Library    Selenium2Library
+Test Teardown    Close Browser
+
+*** Variables ***
+
+*** Testcases ***
+Login Success
+    Go to check grade
+    Fill in Grade
+    User should see Your grade is C
+
+*** Keywords ***
+Go to check grade
+    Open Browser    http://www.clockupstudio.com/demo/gradejs    gc
+	Maximize Browser Window
+
+Fill in Grade
+    Input Text    score    60
+	Click Button    submit
+
+User should see Your grade is C
+    Wait Until Page Contains    Your grade is C
+
