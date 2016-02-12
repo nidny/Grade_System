@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160212 13:26:10.674" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<suite source="D:\Users\suchaya\Documents\GitHub\Grade_System\Grade_System\Grade_System_Test\grade_calculation.txt" id="s1" name="Grade Calculation">
+<test id="s1-t1" name="Login Success">
+<kw name="Go to check grade">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.clockupstudio.com/demo/gradejs</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20160212 13:26:10.849" level="INFO">Opening browser 'gc' to base url 'http://www.clockupstudio.com/demo/gradejs'</msg>
+<status status="PASS" endtime="20160212 13:26:14.427" starttime="20160212 13:26:10.849"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20160212 13:26:14.579" starttime="20160212 13:26:14.428"></status>
+</kw>
+<status status="PASS" endtime="20160212 13:26:14.579" starttime="20160212 13:26:10.849"></status>
+</kw>
+<kw name="Fill in Grade">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>score</arg>
+<arg>100</arg>
+</arguments>
+<msg timestamp="20160212 13:26:14.580" level="INFO">Typing text '100' into text field 'score'</msg>
+<status status="PASS" endtime="20160212 13:26:14.672" starttime="20160212 13:26:14.580"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>submit</arg>
+</arguments>
+<msg timestamp="20160212 13:26:14.673" level="INFO">Clicking button 'submit'.</msg>
+<status status="PASS" endtime="20160212 13:26:14.727" starttime="20160212 13:26:14.672"></status>
+</kw>
+<status status="PASS" endtime="20160212 13:26:14.727" starttime="20160212 13:26:14.580"></status>
+</kw>
+<kw name="User should see Your grade is A">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your grade is A</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160212 13:26:20.090" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160212 13:26:20.091" starttime="20160212 13:26:19.894"></status>
+</kw>
+<msg timestamp="20160212 13:26:20.092" level="FAIL">Text 'Your grade is A' did not appear in 5 seconds</msg>
+<status status="FAIL" endtime="20160212 13:26:20.092" starttime="20160212 13:26:14.727"></status>
+</kw>
+<status status="FAIL" endtime="20160212 13:26:20.092" starttime="20160212 13:26:14.727"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160212 13:26:21.128" starttime="20160212 13:26:20.093"></status>
+</kw>
+<status status="FAIL" endtime="20160212 13:26:21.129" critical="yes" starttime="20160212 13:26:10.848">Text 'Your grade is A' did not appear in 5 seconds</status>
+</test>
+<status status="FAIL" endtime="20160212 13:26:21.137" starttime="20160212 13:26:10.677"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Grade Calculation" pass="0">Grade Calculation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
